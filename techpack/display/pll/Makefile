@@ -5,6 +5,7 @@ ccflags-y := -I$(srctree)/drivers/clk/qcom/
 obj-$(CONFIG_QCOM_MDSS_PLL) += pll_util.o
 obj-$(CONFIG_QCOM_MDSS_PLL) += pll_drv.o
 obj-$(CONFIG_QCOM_MDSS_PLL) += dsi_pll_10nm.o
+CFLAGS_dsi_pll_10nm.o += -I$(src)
 obj-$(CONFIG_QCOM_MDSS_PLL) += dsi_pll_7nm.o
 obj-$(CONFIG_QCOM_MDSS_PLL) += dsi_pll_28lpm.o
 obj-$(CONFIG_QCOM_MDSS_PLL) += dsi_pll_28nm_util.o
@@ -16,3 +17,5 @@ obj-$(CONFIG_QCOM_MDSS_DP_PLL) += dp_pll_7nm.o \
 	dp_pll_10nm.o \
 	dp_pll_10nm_util.o \
 	dp_pll_14nm.o \
+
+CFLAGS_dp_pll_10nm.o += -I$(src)
