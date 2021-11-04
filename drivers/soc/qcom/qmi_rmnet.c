@@ -1114,6 +1114,8 @@ int qmi_rmnet_set_powersave_mode(void *port, uint8_t enable)
 	int rc = -EINVAL;
 	struct qmi_info *qmi = (struct qmi_info *)rmnet_get_qmi_pt(port);
 
+	pr_debug("%s(enable=%u)\n", __func__, enable);
+
 	if (!qmi || !qmi->wda_client)
 		return rc;
 
